@@ -1,0 +1,1 @@
+java -cp ./WEB-INF/lib/lucene-core-2.3.1.jar:./WEB-INF/lib/dom3-xercesImpl.jar:./WEB-INF/lib/lucene-demos-2.3.1.jar:./WEB-INF/lib/PDFBox-0.7.3.jar:./WEB-INF/lib/fontbox-0.1.0.jar:/usr/share/java/mysql.jar:./WEB-INF/classes/: patrilex.PatrilexManager

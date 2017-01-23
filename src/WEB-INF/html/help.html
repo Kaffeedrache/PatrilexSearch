@@ -1,0 +1,78 @@
+<h1>Patrilex Test For Lemmatizers - Help</h1>
+
+<h2>How Does the Search Work</h2>
+
+When you enter some search words there are several steps to be done before you receive your results.
+
+<ul>
+
+<li> Normalization<br>
+When searching for <i>Churches</i> you will also want to find documents that contain the word <i>churches</i>. Because of that, words are normalized to a standard (here lowercase). Also you would probably like to find documents that contain <i>church</i>, so every plural noun in the search words is replaced by its singular form.</li>
+
+<li> Translation to UNL<br>
+The search words are translated to an artificial language called UNL. From this point on, the initial query language is not important anymore.</li>
+
+<li> Query expansion<br>
+Synonyms and more specific words are added to the original search words. For example, to the word <i>rock</i> the words <i>stone</i> or <i>marble</i> would be added.</li>
+
+<li> Translation to Spanish<br>
+Finally the words are translated to Spanish. </li>
+
+<li> Search for documents<br>
+The search will return all documents that contain at least one word of the Spanish search words.</li>
+
+</ul>
+
+
+
+<h2>Search Modes</h2>
+
+There are four different modes for the multilingual search engine available. They differ in which of the the above mentioned steps they perform.
+
+<ul>
+
+<li> <b>Normal search:</b> This is the default mode. The search includes the steps normalization, translation to UNL, query expansion, translation to Spanish and search.</li>
+
+<li> <b>No query expansion:</b> The step query expansion is excluded from the procedure, so the search consists only of normalization, translation to UNL, translation to Spanish and search.</li>
+
+<li> <b>No translation, no expansion:</b> In this mode the search words are only normalized. As there is no translation, this mode is useful in searches for names or Spanish words.</li>
+
+<li> <b>Advanced search:</b> When this mode is selected, more specific searches can be conducted. For an explanation of the possibilities see the explanation of the advanced search below.</li>
+
+</ul>
+
+
+
+<h2>Selection of Language</h2>
+
+The selection of the correct language is very important for the success of the search. It influences the dictionary that is used and the kind of normalization that is done. The Spanish word <i>árboles</i>, for example, will be correctly normalized to the singular <i>arbol</i> when Spanish is selected. But if English is selected it becomes <i>arbole</i>. This word will not be in the English dictionary and if the word is searched without translation it will not find documents that contain <i>árbol</i> or <i>árboles</i>, because it is not the same word.
+
+
+
+
+<h2>Advanced Search</h2>
+
+There are many different ways to search for something if you use the advanced search. Note that these features are only available if you search in Spanish or search for names. If your search words are translated all of the special symbols will be ignored.
+
+<ul>
+
+<li> <b>Phrase searches:</b> A phrase is a group of words that you want to find together. It has to be entered surrounded by quotes. A search for <i>''monasterio real''</i> will only find documents where these words appear next to each other.</li>
+
+<li> <b>Wildcard searches:</b> Wildcard searches allow you to search for words leaving undefined one or more letters. The symbol <i>?</i>can replace one letter, the symbol <i>*</i> replaces various letters. A search for <i>te?t</i> will find documents for <i>test</i>, <i>text</i> and so on. Note that you cannot use <i>*</i> or <i>?</i> as the first character of a search or in phrase searches.</li>
+
+<li> <b>Fuzzy searches:</b> Fuzzy searches find also words that are similar in spelling to the original search word. The ~ symbol after the search word is used for this type of search. A search for <i>madera~</i>will also find documents for <i>manera</i> or <i>madero</i>.</li>
+
+<li> <b>Proximity searches:</b> This type of search is similar to a phrase search, but here you can specify the maximum distance where two words must appear. A search for <i>"monasterio visita"~10 </i> will find every document where the words <i>monasterio</i> and <i>visita</i> occur less than 10 words from each other.</li>
+
+<li> <b>Fields:</b> A document contains different fields. The path of a document is contained in the field ''path'', the title in ''title'' and the contents of the file in ''contents''. So if you want to find documents that have the word <i>monasterio</i>  in the title try <i>title:monasterio</i></li>
+
+<li> <b>Boosting of terms:</b> You can give more weight to a word or a phrase you are searching by adding the symbol <i>^</i>  followed by a number, as, for example, in <i>monasterio^3 real</i>. The higher the number is, the more important the word is for your search.</li>
+
+<li> <b>Boolean operators:</b> By default documents that are returned as a result of your search must contain at least one of the search words. That is equivalent to writing <i>OR</i>. If you want only documents that contain all of the search terms you can join them by <i>AND</i> as in <i>monasterio AND visita</i>. The <i>+</i> symbol denotes a term that must be present in all returned documents, as the <i>-</i> symbol forbids a term to be present in one of the returned documents. So a search for <i>+monasterio visita -escorial</i> will give you all documents that contain <i>monasterio</i>, may contain <i>visita</i> and do not contain <i>escorial</i>. <i>AND</i> and <i>OR</i> must be in upper case. <i>+</i> and <i>-</i> must be directly in front of the word, without a space.</li>
+
+</ul>
+
+<p>
+<a href="search">Back to the seach</a>
+</p>
+

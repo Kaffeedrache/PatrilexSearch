@@ -1,0 +1,85 @@
+# ---------
+# Connection information for the DB
+
+# Location of the DB
+DB_LOCATION=jdbc:mysql://localhost/patrilex
+
+# User for the DB
+DB_USER=patrilexadmin
+
+# Password for the DB
+DB_PASSWORD=bla
+
+# ---------
+# Dictionary files
+# Separate various files with ;
+# Leave empty if there are none
+# Width is the count of letters in the largest words
+
+# Dictionary files for English
+DIC_EN=
+WIDTH_EN=
+
+# Dictionary files for Spanish
+DIC_ES=
+WIDTH_ES=
+
+# Dictionary files for Russian
+DIC_RU=
+WIDTH_RU=
+
+# Dictionary files for Arabic
+DIC_AR=
+WIDTH_AR=
+
+# Width of UNL
+WIDTH_UNL=200
+
+# ---------
+# Thesaurus files
+# Separate various files with ;
+# Leave empty if there are none
+# Only put files with thesauri in UNL!!
+THES=
+
+# ---------
+# Location of Index, web files and documents
+
+# Location of the documents to be indexed
+# This can only be one directory.
+# All subdirectories will be indexed
+DOCS_LOCATION=
+
+# Language of the documents to be indexed
+DOCS_LANGUAGE=ES
+
+# Encoding of the documents to be indexed
+# ISO-8859-1 corresponds to Latin 1
+# UTF-8 corresponds to UTF-8
+# for more encodings see
+# http://java.sun.com/javase/6/docs/technotes/guides/intl/encoding.doc.html
+DOCS_ENCODING=ISO-8859-1
+
+# The location where the index will be created,
+# take a directory outside of web accessible content
+INDEX_LOCATION=
+
+# Web address of the documents
+# (if document DOCS_Location/folder/file should be linked
+# as www.my.domain.org/something/folder/file enter
+# www.my.domain.org/something/)
+WEB_LOCATION=www.my.domain.org/something/
+
+# The location where the files for header and footer are located
+HTML_ROOT=
+
+# File with header information
+# to be included at the head of the search page
+HEADERFILE=header.html
+
+# File with footer information
+# to be included at the head of the search page
+FOOTERFILE=footer.html
+
+# How many hits are to be shown on one page
+HITS_PER_PAGE=25
