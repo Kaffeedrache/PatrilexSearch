@@ -30,6 +30,11 @@ Assumed to be in `WEB-INF/lib`.
 The folder `doc` contains the Javadoc, as well as an installation guide, a maintainance guide and a user guide. Keep in mind that this project is from 2008.
 
 
-## Licence
+## Licence and References
 
 This code is distributed under a Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported license http://creativecommons.org/licenses/by-nc-sa/3.0/
+
+Please cite:
+Wiltrud Kessler (2008)
+A Multilingual Search Engine Based on the Universal Networking Language.
+Studienarbeit, Universität Stuttgart.
